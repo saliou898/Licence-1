@@ -1,0 +1,203 @@
+LES CHAINES DE CARACTERES
+Les  chaines de caracteres representent un type de donnees elementaire. Sa manipulation se fait a travers l'utilisation de fonctions. Toute valeur chaine doit etre en guillemet (""). Une chaine peut etre  vide dans ce cas elle est notee "". 
+exemple :
+ch<- "Bonjour tout le monde"
+I - Les fonctions associees aux chaines
+Les fonctions sont :
+--> LONGUEUR() OU LONG()
+--> SOUSCHAINE() OU SSCHAINE()
+--> RANG()
+--> CONCAT() OU LES OPERATEURS + OU ||
+--> LES FONCTIONS DE CONVERSION	
+-------> LA FONCTION CVCHAINE()
+-------> LA FONCTION CVNOMBRE()
+
+1- LA FONCTION LONGUEUR() OU LONG()
+Elle recoit une chaine de caracteres puis renvoie le nombre de caracteres qui la compose. 
+SYNTAXES:
+LONGUEUR(CHAINE) OU LONG(CHAINE)
+EXEMPLES : 
+a) LONGUEUR("SERIGNE MODOU KARA SAMB") =23
+b) LONG("SAMBA SOUARE") = 12
+c) LONGUEUR("LES ETUDIANTS SONT DES GENIES") = 29
+d) VAR C:CHAINE
+C <- "Mme Aissatou GASSAMA" 
+LONGUEUR(C) =  20
+
+2- LA FONCTION SOUSCHAINE() OU SSCHAINE()
+Elle represente une fonction de copie. Elle permet de copier tout ou une partie d'une chaine de caracteres.
+SYNTAXES
+SOUSCHAINE(<CHAINE SOURCE>,<POSITION>,<TAILLE>) 
+OU SSCHAINE(<CHAINE SOURCE>,<POSITION>,<TAILLE>)
+EXEMPLE
+VAR CH1,CH2,CH3:CHAINE
+CH1 <- "Fatou, Famara, Fatima et Farmata sont des Fatou Fatou"
+CH2 <- "SERIGNE CHEIKH, SERIGNE KARA, SERIGNE BABACAR ET SERIGNE MALICK SONT DES SERIGNE"
+CH3 <- Pathe, Pape, Pambou et Palmane commencent par Pa"
+
+a) SousChaine(CH1,1,5) = "Fatou"
+b) SOUSCHAINE(CH1,LONGUEUR(CH1)-4,5) ="Fatou"
+C) SOUSCHAINE(CH2,1,LONG(CH2)) = "SERIGNE CHEIKH, SERIGNE KARA, SERIGNE BABACAR ET SERIGNE MALICK SONT DES SERIGNE" = CH2
+D) SSCHAINE(CH2,1,7) = "SERIGNE"
+E) SSCHAINE(CH3,9,6) = "ape, P"
+
+3 - LA FONCTION RANG()
+Elle represente une fonction de recherche qui recoit 2 chaines (chaine principale et chaine secondaire). La fonction recherche si la chaine secondaire se trouve ou pas dans la chaine principale. Si c'est le cas, la fonction renvoie la position du premier caractere de la premiere apparition de la chaine secondaire dans la chaine principale sinon elle renvoie la valeur 0 (zero).
+
+SYNTAXE
+RANG(<CHAINE PRINCIPALE>,<CHAINE SECONDAIRE)
+
+EXEMPLES
+VAR CH1,CH2,CH3:CHAINE
+CH1 <- "Fatou, Famara, Fatima et Farmata sont des Fatou Fatou"
+CH2 <- "SERIGNE CHEIKH, SERIGNE KARA, SERIGNE BABACAR ET SERIGNE MALICK SONT DES SERIGNE"
+CH3 <- Pathe, Pape, Pambou et Palmane commencent par Pa"
+
+a) RANG(CH1,"Fatou") = 1
+b) RANG(CH1,"Fam") = 8
+c) RANG(CH1,CH2) = 0
+d) RANG (CH2,"SERIGNE") = 1
+e) RANG(CH2,"CHEIKH") = 9
+f) RANG(CH3,CH2) = 0
+e) RANG(CH3,"Pape") = 8
+
+4 - LA CONCATENATION
+Elle recoit plusieurs chaines puis cree la chaine de fusion. La concatenation peut se faire en utilisant la fonction CONCAT() OU LES OPERATEURS + OU ||.
+
+SYNTAXES
+
+VAR CH, CH1, CH2, CH3, .., CHN : CHAINE
+CH <- CONCAT(CH1,CH2,..,CHN)
+OU 
+CH <- CH1 + CH2 + .. + CHN
+OU 
+CH<- CH1 || CH2 || .. || CHN
+
+EXEMPLES
+VAR CH,CH1,CH2,CH3,CH4,CH5,CH6:CHAINE
+
+CH1<- "BON"
+CH2<- "JOUR"
+CH3<- " "
+CH4<- "TOUT"
+CH5<- "LE"
+CH6<- "MONDE"
+
+CH <- CONCAT(CH1,CH2,CH3,CH4,CH3,CH5,CH3,CH6)
+OU
+CH <- CH1 + CH2 + CH3 + CH4 + CH3 + CH5 + CH3 + CH6
+OU
+CH <- CH1 || CH2 || CH3 || CH4 || CH3 ||CH5 || CH3 || CH6
+
+EN RESULTAT NOUS AURONS
+CH <- "BONJOUR TOUT LE MONDE"
+
+5 - LES FONCTIONS DE CONVERSION
+Elles sont au nombre de 2 (CVCHAINE() ET CVNOMBRE())
+5 - a) LA FONCTION CVCHAINE()
+Elle recoit un nombre puis renvoie la chaine correspondante.
+SYNTAXE : CVCHAINE(NUMERIQUE)
+
+EXEMPLES :
+a- CVCHAINE(45) = "45"
+b- CVCHAINE(85+15) = "100"
+c- CCVCHAINE(10010) = "10010"
+
+5-b) LA FONCTION CVNOMBRE()
+Elle recoit une chaine composee exclusivement de numerique et renvoie la valeur numerique correspondante
+
+SYNTAXE : CVNOMBRE(CHAINE)
+
+a- CVNOMBRE("12345")=12345
+b- CVNOMBRE("54.5")=54.5
+c- CVNOMBRE(CVCHAINE(260+645))=CVNOMBRE("905")=905
+
+EXERCICE : Ecrire un programme qui permet de saisir une phrase, le programme affiche la phrase puis determine et affiche aussi le nombre de mots qui composent la phrase.
+NB : EN FRANCAIS . LES DELIMITEURS DE MOTS SONT L'ESPACE ET L'APOSTROPHE
+
+EXEMPLE
+PHRASE <- "COUMBA, L'AMI DE KARA VA AU MARCHE."
+NB MOTS = 8
+NB ESPACE = 6
+NB APOSTROPHE = 1
+NB MOTS = NB ESPACES + NB APOSTROPHE + 1
+Programme Application
+var phrase:chaine
+var i,nbMot,nbEsp,nbAp,N:Entier
+Debut
+Ecrire "Entrer une phrase"
+Lire phrase
+nbEsp <- 0
+nbAp <- 0
+N <- Longueur(phrase)
+Pour i allant de 1 a N Faire
+	Si (SOUSCHAINE(phrase,i,1)="'") Alors
+		nbAp <- nbAp + 1
+	FinSi
+	Si (SOUSCHAINE(phrase,i,1)=" ") Alors
+		nbEsp <- nbEsp + 1
+	FinSi
+Finpour
+Si N!=0 Alors
+	nbMot <- nbAp + nbEsp + 1
+Sinon
+	nbMot <- 0
+FinSi
+Ecrire "La phrase contient ",nbMot," mots"
+Fin
+
+Exercice : Ecrire un programme qui demande a l'utilisateur de saisir un mot. Le programme si le mot est un palindrome ou pas. 
+NB : un palindrome est un mot qui se lit dans les 2 sens.
+Exemples :
+a- ISI EST UN PALINDROME
+b- MATAM EST UN PALINDROME
+c- ZEYNA N'EST PAS UN PALINDROME
+Programme Exercice
+var mot,inverse_mot:chaine
+var i,N:entier
+Debut
+Ecrire "Entrer un mot"
+Lire mot
+N <- LONGUEUR(mot)
+inverse_mot <- "" (initialisation a la chaine vide)
+Pour i allant de N a 1 par pas -1 Faire
+	inverse_mot <- CONCAT(SOUSCHAINE(mot,i,1),inverse_mot)
+FinPour
+SI mot = inverse_mot Alors
+	Ecrire "Le mot ",mot," est un palindrome"
+Sinon
+	Ecrire "Le mot ",mot," n'est pas un palindrome"
+FinSi
+Fin
+II - LES FONCTIONS SUR LES CARACTERES
+Les caracteres representent aussi un type elementaire. Un caractere peut etre code en utilisant les codes standards (exemple CODE ASCII, CODE UNICODE) ou un code proprietaire. Une valeur caractere est toujours entre apostrophe.
+Les fonctions associees aux caracteres sont :
+1- La fonction CODe()
+Elle recoit un caractere et renvoie son code ASCII. LES CODES ASCII VARIE DE 0 A 255
+SYNTAXE : CODE(CARACTERE)
+
+EXEMPLES
+a- CODE('A') = 65
+b- CODE('B') = 66
+c- CODE('Z') = 90
+d- CODE('0') = 48
+e- CODE('1') = 49
+f- CODE(' ') = 32
+g- CODE('a') = 97
+h- CODE('<') = 60
+I- CODE('=') = 61
+J- CODE('>') = 62
+K- CODE('y') = 121
+
+2 LA FONCTION CAR() OU CARACTERE()
+Elle recoit un  numerique (compris entre 0 et 255) puis renvoie sa valeur de CODE ASCII.
+SYNTAXES:
+CAR(NUMERIQUE)
+OU
+CARACTERE(NUMERIQUE)
+
+EXEMPLES
+a- CAR(48)='0'
+b- CAR(50)='2'
+c- CAR(62)='>'
+d- CAR(120)='x'

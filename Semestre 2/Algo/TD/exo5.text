@@ -1,0 +1,34 @@
+programme exo5
+
+var phrase, mot, mot_actuel,caract: CHAINE
+var i, nombre, : ENTIER
+
+
+Début
+
+Afficher("Saisir la phrase : ")
+
+Saisir(phrase)
+
+Afficher("Saisir le mot à rechercher : ")
+
+Saisir(mot)
+
+nb_presences ← 0
+mot_actuel ← ""
+
+Pour i allant de 1 à long(phrase) Faire
+caract←sschaine(phrase,i,1)
+si caract!="" et caract !="."
+mot_actuel ← mot_actuel +caract
+Sinon
+si(mot_actuel=mot)
+    nombre← nombre+1
+    FinSi
+    mot_actuel← ""
+
+Fin Pour
+
+Afficher("Le mot ",mot,"apparaît",nombre, " fois")
+
+Fin

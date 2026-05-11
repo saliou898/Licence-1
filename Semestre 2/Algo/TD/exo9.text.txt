@@ -1,0 +1,25 @@
+programme exo9
+
+var n,reste,binaire: entier
+
+Debut
+repeter
+afficher("Entrer un nombre entier positif")
+saisir(n)
+jusqua(n>0)
+
+si n=0 alors
+binaire  ← "0"
+sinon
+binaire ← ""
+
+tantque n>0 Faire
+
+reste ← n % 2
+binaire ← convertir en Texte(reste) + binaire 
+n ← n DIV 2 (division entière)
+ finsi
+tantque
+afficher""Le code binaire est : ", binaire"
+
+fin

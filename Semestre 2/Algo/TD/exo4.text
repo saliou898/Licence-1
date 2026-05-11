@@ -1,0 +1,19 @@
+programme exo4
+ var paragraphe: chaine
+ var compteur: entier
+ var caractere_actuelle: caractere
+  
+  Debut
+  afficher("veiller saisir votre paragraphe")
+  saisir(paragraphe)
+  compteur ← 0
+
+Pour i allant de 1 à Longueur(paragraphe) Faire
+caractere_actuel ←sschaine(paragraphe,i,1) 
+
+Si(caractere_actuel'=' '.') OU (caractere_actuel'=' '!') OU (caractere_actuel'=''?') Alors
+compteur ← compteur + 1
+Fin Pour
+
+Afficher("Le nombre de phrases est : ", compteur)
+Fin

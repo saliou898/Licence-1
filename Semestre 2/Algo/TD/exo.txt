@@ -1,0 +1,19 @@
+programme exo1
+var verbe,term: chaine
+  Début
+   repeter
+    afficher("entrer un verbe")
+    saisir(verbe)
+    term→sschaine(verbe,long(verbe),-1,2)
+    jusqua(term="er")
+    
+si (term="er")Alors
+    afficher("le verbe est du premier groupe")
+sinon
+si long(term="ir")Alors
+    afficher("le verbe est du seconde groupe")
+sinon
+   afficher("le verbe est du troisieme groupe")
+finsi
+finsi
+fin
