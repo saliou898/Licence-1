@@ -1,0 +1,42 @@
+programme exo3
+var verbe,radical,participe_present,term:chaine
+Debut 
+afficher("entrer un verbe")
+saisir(verbe)
+term←sschaine(verbe,long(verbe)-1,2)
+jusqua(term="ir")
+
+Si verbe se termine  par "ir"  Alors
+radical←sschaine(verbe,1.long(verbe)-2)
+
+//affichage du verbe au present//
+
+afficher(" le Présent de l'indicatif")
+afficher("j'"+radical+"is")
+afficher("tu"+radical+"is")
+afficher("il/elle"+radical+"it")
+afficher("nous"+radical+"issons")
+afficher("vous"+radical+"issez")
+afficher("ils/elles"+radical+"issent")
+sinon
+afficher("ce n'est pas un verbe du deuxieme groupe")
+finsi
+
+//affichage du verbe au Passé Composé
+
+Si verbe se termine  par "ir" et le participe_passe= "issant" Alors
+radical←sschaine(verbe,1,long(verbe)-2)
+participe← radical + "i"
+
+afficher("j'ai"+ participe)
+afficher("tu as"+ participe)
+afficher("il/ells a"+ participe)
+afficher("nous avons"+ participe)
+afficher("vous avez"+ participe)
+afficher("ils/elles ont"+ participe)
+sinon
+afficher("ce n'est pas un verbe du deuxieme group")
+fin
+
+
+

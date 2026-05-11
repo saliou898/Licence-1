@@ -1,0 +1,34 @@
+programme exo8
+
+var phrase,motsup,modifier,caract: chaine 
+var i : entier 
+ Debut 
+ 
+  afficher("Entrer une phrase")
+  saisir(phrase)
+
+  afficher("Entrer un mot a supprimer")
+  saisir(mot)
+  
+  mot <- " "
+  modifier <- " "
+
+    pour i <- 1 a long(phrase) Faire
+
+     caract <- sschaine(phrase,i,1)  alors
+         si caract!=''
+         mot <- mot + caract
+         sinon
+             
+             si mot!= motsup alors
+             modifier <- modifier + mot + " "
+             finsi
+               mot <- '' 
+           
+         finsi
+     finpour
+
+ afficher("la phrase apres modification est : ", modifier")
+ fin 
+
+

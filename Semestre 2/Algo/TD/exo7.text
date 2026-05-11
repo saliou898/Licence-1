@@ -1,0 +1,16 @@
+programme exo7
+ var mat, listerMagique
+ Debut 
+ repeter
+     repeter 
+ afficher("Entrer un mot ")
+ saisir (mot)
+    jusqua(mot="bonjour",mot="merci",mot"s'il te plait", mot="pardon", mot="excuse moi", mot="au revoir")
+  si (mot=listerMagique) alors
+       afficher("le mot magique ")
+  sinon 
+        afficher("le mot n'est pas magique")
+    finsi 
+    saisir("continuer")
+jusqua(continue="non")
+fin 

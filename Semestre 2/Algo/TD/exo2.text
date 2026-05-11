@@ -1,0 +1,68 @@
+   programme exo2
+var verbe,present,radicale,participe,term:chaine
+
+debut
+afficher("entrer le verbe")
+saisir (verbe)
+      term→sschaine(verbe,long(verbe),-1,2)
+      jusqua(term="er")
+Si verbe ne finit pas par "er" OU verbe = "aller" Alors
+    afficher("Erreur : Ce n'est pas un verbe régulier du 1er groupe",quitter)
+sinon
+
+si (term="er")Alors
+    afficher("le verbe est du premier groupe")
+     
+
+    radical ← sschaine(verbe,1,long(verbe)-2)
+    participe ← radical + "é"
+//Affichage du Présent :
+
+afficher" Présent de l'indicatif "
+
+Si (le radical commence par a, e, i, o, u, y, h) alors
+
+afficher ("J'" + radical + "e")
+
+Sinon
+
+afficher ("Je " + radical + "e")
+
+Fin Si
+
+ afficher("Tu " + radical + "es") 
+
+ afficher ("Il/Elle " + radical + "e")
+
+Si (sschaine(radical,long(radical),1)='g') alors
+
+afficher ("Nous " + radical + "eons")
+
+Sinon
+
+afficher ("Nous " + radical + "ons")
+
+Fin Si
+
+afficher ("Vous " + radical + "ez")
+
+afficher ("Ils/Elles " + radical + "ent")
+
+
+//////Affichage du Passé Composé//////////////
+
+afficher (" pour Passé Composé ")
+
+afficher ("J'ai " + participe )
+
+afficher ("Tu as " + participe )
+
+afficher( "Il/Elle a " + participe) 
+
+afficher ("Nous avons " + participe )
+
+afficher ("Vous avez " + participe )
+
+afficher("Ils/Elles ont " + participe )
+
+Fin

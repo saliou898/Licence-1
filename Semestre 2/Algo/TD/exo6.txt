@@ -1,0 +1,18 @@
+programme exo6
+ 
+ var mot ,mot_invers,caract: chaine
+ var i;
+ Debut
+ Afficher("Entrer un mot:")
+saisir(mot)
+mot_invers← ""
+pour← long(mot) à 1 par pas de -1 Faire
+caract← sschaine(mot,i,1)
+mot_invers← mot_invers+caract
+fin pour
+si (mot_invers=mot)alors
+afficher("Ce mot est un palindrone")
+sinon
+afficher(" Ce mot n'est pas palindrone")
+finsi
+fin 
