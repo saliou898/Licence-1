@@ -27,6 +27,7 @@ switch (choix) {
         if (trouver === false) {
             alert("Vous avez echouer !")
         }
+        break
 
     }
 
@@ -39,7 +40,7 @@ switch (choix) {
         let trouver = false
         for (i = 1; i <= n; i++) {
             alert("Tentative n° " + i)
-            let dev = parseInt(prompt("Diviner un nombre entre [0-10]: "))
+            let dev = parseInt(prompt("Diviner un nombre entre [0-50]: "))
             if (dev === nbr) {
                 alert("Bravo tu a bien deviner !")
                 trouver = true
@@ -57,6 +58,7 @@ switch (choix) {
         if (trouver === false) {
             alert("Vous avez echouer !")
         }
+        break
 
     }
     case 3: {
@@ -68,7 +70,7 @@ switch (choix) {
         let trouver = false
         for (i = 1; i <= n; i++) {
             alert("Tentative n° " + i)
-            let dev = parseInt(prompt("Diviner un nombre entre [0-10]: "))
+            let dev = parseInt(prompt("Diviner un nombre entre [0-100]: "))
             if (dev === nbr) {
                 alert("Bravo tu a bien deviner !")
                 trouver = true
@@ -86,6 +88,7 @@ switch (choix) {
         if (trouver === false) {
             alert("Vous avez echouer !")
         }
+        break
 
     }
     case 4: {
@@ -97,7 +100,7 @@ switch (choix) {
         let trouver = false
         for (i = 1; i <= n; i++) {
             alert("Tentative n° " + i)
-            let dev = parseInt(prompt("Diviner un nombre entre [0-10]: "))
+            let dev = parseInt(prompt("Diviner un nombre entre [0-1000]: "))
             if (dev === nbr) {
                 alert("Bravo tu a bien deviner !")
                 trouver = true
@@ -115,7 +118,12 @@ switch (choix) {
         if (trouver === false) {
             alert("Vous avez echouer !")
         }
+        break
 
+    }
+    case 5: {
+        alert("Au revoir !")
+        break
     }
     default:
         alert("Choix invalide")
