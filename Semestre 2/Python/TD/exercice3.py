@@ -1,7 +1,6 @@
 prenom=input("Donner votre prenom: ")
 nom=input("Donner votre nom: ")
-c= prenom+nom
-print(len(c))
+
 nom=nom.upper()
 print(f"Nom masuscul: {nom}")
 nom=nom.lower()
@@ -13,4 +12,6 @@ if 'e' in nom.lower():
     print("Oui il existe ")
 else:
     print("Non")
-    
+
+c= (prenom+nom).replace(" ","")
+print(len(c))

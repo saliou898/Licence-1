@@ -25,7 +25,7 @@ else:
 
 email = input("Entrez une adresse email : ")
 
-if "@" in email and "." in email:
+if "@" in email and "." in email.split('@')[-1]:
     print("Adresse email valide.")
 else:
     print("Adresse email invalide.")
